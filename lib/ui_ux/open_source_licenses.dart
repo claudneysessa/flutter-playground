@@ -1,28 +1,27 @@
-import 'dart:async';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/values/imports.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class OpenSource {
-  String name;
-  String link;
-
   OpenSource(this.name, this.link);
+
+  final String name;
+  final String link;
 }
 
 class OpenSourceLicenses extends StatelessWidget {
+  OpenSourceLicenses({super.key});
+
   final List<OpenSource> list = [
     OpenSource('Flutter',
         'https://raw.githubusercontent.com/flutter/flutter/master/LICENSE'),
     OpenSource('cupertino_icons',
         'https://raw.githubusercontent.com/flutter/cupertino_icons/master/LICENSE'),
-    OpenSource('flare_flutter',
-        'https://raw.githubusercontent.com/2d-inc/Flare-Flutter/stable/LICENSE'),
     OpenSource('quick_actions',
-        'https://raw.githubusercontent.com/flutter/plugins/master/LICENSE'),
+        'https://raw.githubusercontent.com/flutter/packages/main/LICENSE'),
     OpenSource('google_fonts',
-        'https://raw.githubusercontent.com/material-foundation/google-fonts-flutter/master/LICENSE'),
+        'https://raw.githubusercontent.com/material-foundation/flutter-packages/main/LICENSE'),
     OpenSource('mobx',
         'https://raw.githubusercontent.com/mobxjs/mobx.dart/master/LICENSE'),
     OpenSource('flutter_mobx',
@@ -30,9 +29,9 @@ class OpenSourceLicenses extends StatelessWidget {
     OpenSource('provider',
         'https://raw.githubusercontent.com/rrousselGit/provider/master/LICENSE'),
     OpenSource('url_launcher',
-        'https://raw.githubusercontent.com/flutter/plugins/master/LICENSE'),
+        'https://raw.githubusercontent.com/flutter/packages/main/LICENSE'),
     OpenSource('webview_flutter',
-        'https://raw.githubusercontent.com/flutter/plugins/master/LICENSE'),
+        'https://raw.githubusercontent.com/flutter/packages/main/LICENSE'),
   ];
 
   @override
@@ -51,7 +50,21 @@ class OpenSourceLicenses extends StatelessWidget {
     );
   }
 
+  /// [webview_flutter] só possui implementação para Android e iOS. Nas demais
+  /// plataformas a licença é aberta no navegador externo.
+  static bool get _supportsWebView =>
+      !kIsWeb &&
+      (defaultTargetPlatform == TargetPlatform.android ||
+          defaultTargetPlatform == TargetPlatform.iOS);
+
   void navigateToLicence(BuildContext context, OpenSource licence) {
+    if (!_supportsWebView) {
+      launchUrl(
+        Uri.parse(licence.link),
+        mode: LaunchMode.externalApplication,
+      );
+      return;
+    }
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => LicenseDetail(licence: licence),
@@ -61,38 +74,32 @@ class OpenSourceLicenses extends StatelessWidget {
 }
 
 class LicenseDetail extends StatefulWidget {
-  final OpenSource? licence;
+  final OpenSource licence;
 
-  const LicenseDetail({Key? key, this.licence}) : super(key: key);
+  const LicenseDetail({super.key, required this.licence});
 
   @override
-  _LicenseDetailState createState() => _LicenseDetailState();
+  State<LicenseDetail> createState() => _LicenseDetailState();
 }
 
 class _LicenseDetailState extends State<LicenseDetail> {
-  final Completer<WebViewController> _controller =
-      Completer<WebViewController>();
+  late final WebViewController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.disabled)
+      ..loadRequest(Uri.parse(widget.licence.link));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.licence!.name),
+        title: Text(widget.licence.name),
       ),
-      body: Builder(
-        builder: (BuildContext context) => WebView(
-          initialUrl: widget.licence!.link,
-          onWebViewCreated: (WebViewController webViewController) {
-            _controller.complete(webViewController);
-          },
-          onPageStarted: (String url) {
-            print('Page started loading: $url');
-          },
-          onPageFinished: (String url) {
-            print('Page finished loading: $url');
-          },
-        ),
-      ),
+      body: WebViewWidget(controller: _controller),
     );
   }
 }

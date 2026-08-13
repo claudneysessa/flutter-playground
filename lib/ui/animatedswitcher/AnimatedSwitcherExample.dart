@@ -5,8 +5,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedSwitcherExample extends StatefulWidget {
-  const AnimatedSwitcherExample({Key? key, required this.title})
-      : super(key: key);
+  const AnimatedSwitcherExample({super.key, required this.title});
 
   final String title;
 
@@ -54,7 +53,7 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
                     // child each time the count changes, so that it will begin its animation
                     // when the count changes.
                     key: ValueKey<int>(_counter),
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
               ],

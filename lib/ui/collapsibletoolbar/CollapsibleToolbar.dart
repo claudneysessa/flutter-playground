@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class CollapsibleToolbar extends StatefulWidget {
-  const CollapsibleToolbar({Key? key, required this.title}) : super(key: key);
+  const CollapsibleToolbar({super.key, required this.title});
   final String title;
 
   @override

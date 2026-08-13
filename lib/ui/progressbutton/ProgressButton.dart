@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProgressButton extends StatefulWidget {
-  const ProgressButton({Key? key, required this.title}) : super(key: key);
+  const ProgressButton({super.key, required this.title});
 
   final String title;
 
@@ -47,9 +47,9 @@ class _ProgressButtonState extends State<ProgressButton>
             width: _width,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(0.0),
+                padding: EdgeInsets.zero,
                 elevation: 4.0,
-                primary: Colors.lightGreen,
+                backgroundColor: Colors.lightGreen,
               ),
               onPressed: () {
                 setState(() {

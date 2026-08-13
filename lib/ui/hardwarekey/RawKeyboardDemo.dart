@@ -8,15 +8,15 @@ import 'package:flutter/services.dart';
 class RawKeyboardDemo extends StatefulWidget {
   final String title;
 
-  const RawKeyboardDemo({Key? key, required this.title}) : super(key: key);
+  const RawKeyboardDemo({super.key, required this.title});
 
   @override
-  _HardwareKeyDemoState createState() => _HardwareKeyDemoState();
+  State<RawKeyboardDemo> createState() => _HardwareKeyDemoState();
 }
 
 class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
   final FocusNode _focusNode = FocusNode();
-  RawKeyEvent? _event;
+  KeyEvent? _event;
 
   @override
   void dispose() {
@@ -24,7 +24,7 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
     super.dispose();
   }
 
-  void _handleKeyEvent(RawKeyEvent event) {
+  void _handleKeyEvent(KeyEvent event) {
     setState(() {
       _event = event;
     });
@@ -38,9 +38,9 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: RawKeyboardListener(
+        child: KeyboardListener(
           focusNode: _focusNode,
-          onKey: _handleKeyEvent,
+          onKeyEvent: _handleKeyEvent,
           child: AnimatedBuilder(
             animation: _focusNode,
             builder: (BuildContext context, Widget? child) {
@@ -49,38 +49,48 @@ class _HardwareKeyDemoState extends State<RawKeyboardDemo> {
                   onTap: () {
                     FocusScope.of(context).requestFocus(_focusNode);
                   },
-                  child: Text('Tap to focus', style: textTheme.headline4),
+                  child: Text('Tap to focus', style: textTheme.headlineMedium),
                 );
               }
 
-              if (_event == null) {
-                return Text('Press Volume key', style: textTheme.headline4);
-              }
-
-              int? flags;
-              int? codePoint;
-              int? keyCode;
-              int? scanCode;
-              int? metaState;
-              final RawKeyEventData data = _event!.data;
-
-              if (data is RawKeyEventDataAndroid) {
-                flags = data.flags;
-                codePoint = data.codePoint;
-                keyCode = data.keyCode;
-                scanCode = data.scanCode;
-                metaState = data.metaState;
+              final KeyEvent? event = _event;
+              if (event == null) {
+                return Text(
+                  'Press Volume key',
+                  style: textTheme.headlineMedium,
+                );
               }
 
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('${_event.runtimeType}', style: textTheme.subtitle1),
-                  Text('flags: $flags', style: textTheme.subtitle1),
-                  Text('codePoint: $codePoint', style: textTheme.subtitle1),
-                  Text('keyCode: $keyCode', style: textTheme.subtitle1),
-                  Text('scanCode: $scanCode', style: textTheme.subtitle1),
-                  Text('metaState: $metaState', style: textTheme.subtitle1),
+                  Text('${event.runtimeType}', style: textTheme.titleMedium),
+                  Text(
+                    'logicalKey: ${event.logicalKey.debugName}',
+                    style: textTheme.titleMedium,
+                  ),
+                  Text(
+                    'physicalKey: ${event.physicalKey.debugName}',
+                    style: textTheme.titleMedium,
+                  ),
+                  Text(
+                    'keyId: 0x${event.logicalKey.keyId.toRadixString(16)}',
+                    style: textTheme.titleMedium,
+                  ),
+                  Text(
+                    'character: ${event.character ?? '-'}',
+                    style: textTheme.titleMedium,
+                  ),
+                  Text(
+                    'isControlPressed: '
+                    '${HardwareKeyboard.instance.isControlPressed}',
+                    style: textTheme.titleMedium,
+                  ),
+                  Text(
+                    'isShiftPressed: '
+                    '${HardwareKeyboard.instance.isShiftPressed}',
+                    style: textTheme.titleMedium,
+                  ),
                 ],
               );
             },

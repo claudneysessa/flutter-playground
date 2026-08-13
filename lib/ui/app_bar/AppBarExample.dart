@@ -5,6 +5,8 @@
 import 'package:flutter/material.dart';
 
 class AppBarExample extends StatelessWidget {
+  const AppBarExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,10 +71,10 @@ class AppBarExample extends StatelessWidget {
               iconTheme: const IconThemeData(
                 color: Colors.black,
               ),
-              textTheme: const TextTheme(
-                headline6: TextStyle(
-                  color: Colors.black,
-                ),
+              titleTextStyle: const TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -81,10 +83,10 @@ class AppBarExample extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
-              title: Column(
+              title: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const <Widget>[
+                children: <Widget>[
                   Text(
                     "Title",
                     style: TextStyle(fontSize: 18.0),
@@ -103,8 +105,8 @@ class AppBarExample extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 16.0),
             child: AppBar(
               backgroundColor: Colors.orangeAccent,
-              title: Row(
-                children: const <Widget>[
+              title: const Row(
+                children: <Widget>[
                   FlutterLogo(),
                   Padding(
                     padding: EdgeInsets.only(left: 16.0),
