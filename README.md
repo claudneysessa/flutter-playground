@@ -19,10 +19,11 @@ Consider Contributing if you find this project helpful.
 > updates in 2021 and no longer compiled with current toolchains. This fork brings it back to
 > life on Flutter 3.44 / Dart 3, keeping the original license and authorship intact.
 >
-> **2026 revival maintained by Claudney Sarti Sessa** — Senior Developer
-> · [claudneysartisessa@gmail.com](mailto:claudneysartisessa@gmail.com)
-> · [LinkedIn](https://www.linkedin.com/in/claudneysessa)
-> · [GitHub](https://github.com/claudneysessa)
+> **2026 revival maintained by Claudney Sarti Sessa**<br>
+> Senior Developer<br>
+> [claudneysartisessa@gmail.com](mailto:claudneysartisessa@gmail.com)<br>
+> [linkedin.com/in/claudneysessa](https://www.linkedin.com/in/claudneysessa)<br>
+> [github.com/claudneysessa](https://github.com/claudneysessa)
 
 ## Preview
 
