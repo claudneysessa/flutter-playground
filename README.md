@@ -148,15 +148,15 @@ For help getting started with Flutter, view online
 
 **About this fork** — Claudney Sarti Sessa
 
-<a href="https://www.linkedin.com/in/claudneysessa"><img src="./icons/linkedin-icon.png?raw=true" width="60" alt="LinkedIn"></a>
+<a href="https://www.linkedin.com/in/claudneysessa"><img src="./icons/linkedin-icon.png?raw=true" width="60" height="60" alt="LinkedIn"></a>
 &nbsp;[claudneysartisessa@gmail.com](mailto:claudneysartisessa@gmail.com)
 &nbsp;·&nbsp;[github.com/claudneysessa](https://github.com/claudneysessa)
 
 **About the original project** — Bhavik Makwana
 
-<a href="https://twitter.com/ibhavikmakwana"><img src="./icons/twitter-icon.png?raw=true" width="60" alt="Twitter"></a>
-<a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60" alt="Medium"></a>
-<a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60" alt="LinkedIn"></a>
+<a href="https://twitter.com/ibhavikmakwana"><img src="./icons/twitter-icon.png?raw=true" width="60" height="60" alt="Twitter"></a>
+<a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60" height="60" alt="Medium"></a>
+<a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60" height="60" alt="LinkedIn"></a>
 
 ## Donate
 
@@ -197,11 +197,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/ibhavikmakwana"><img src="https://avatars.githubusercontent.com/u/22465800?v=4&s=100" width="100px;" alt="Bhavik Makwana"/><br /><sub><b>Bhavik Makwana</b></sub></a><br /><sub>Original author</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=ibhavikmakwana" title="Code">💻</a> <a href="#design" title="Design">🎨</a> <a href="#ideas" title="Ideas">🤔</a></td>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/claudneysessa"><img src="https://avatars.githubusercontent.com/u/12506432?v=4&s=100" width="100px;" alt="Claudney Sarti Sessa"/><br /><sub><b>Claudney Sarti Sessa</b></sub></a><br /><sub>2026 revival</sub><br /><a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Code">💻</a> <a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Documentation">📖</a> <a href="#maintenance" title="Maintenance">🚧</a> <a href="test" title="Tests">⚠️</a></td>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/prasadsunny1"><img src="https://avatars.githubusercontent.com/u/11705392?v=4&s=100" width="100px;" alt="sanni prasad"/><br /><sub><b>sanni prasad</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/dhuma1981"><img src="https://avatars.githubusercontent.com/u/298484?v=4&s=100" width="100px;" alt="Dhrumil Shah"/><br /><sub><b>Dhrumil Shah</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=dhuma1981" title="Code">💻</a></td>
-      <td align="center" valign="top" width="25%"><a href="https://github.com/EdgarFabiano"><img src="https://avatars.githubusercontent.com/u/11666921?v=4&s=100" width="100px;" alt="Edgar Fabiano De Souza Filho"/><br /><sub><b>Edgar Fabiano De Souza Filho</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=EdgarFabiano" title="Code">💻</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/ibhavikmakwana"><img src="https://avatars.githubusercontent.com/u/22465800?s=100" width="100" height="100" alt="Bhavik Makwana"/><br /><sub><b>Bhavik Makwana</b></sub></a><br /><sub>Original author</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=ibhavikmakwana" title="Code">💻</a> <a href="#design" title="Design">🎨</a> <a href="#ideas" title="Ideas">🤔</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/claudneysessa"><img src="https://avatars.githubusercontent.com/u/12506432?s=100" width="100" height="100" alt="Claudney Sarti Sessa"/><br /><sub><b>Claudney Sarti Sessa</b></sub></a><br /><sub>2026 revival</sub><br /><a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Code">💻</a> <a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Documentation">📖</a> <a href="#maintenance" title="Maintenance">🚧</a> <a href="test" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/prasadsunny1"><img src="https://avatars.githubusercontent.com/u/11705392?s=100" width="100" height="100" alt="sanni prasad"/><br /><sub><b>sanni prasad</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/dhuma1981"><img src="https://avatars.githubusercontent.com/u/298484?s=100" width="100" height="100" alt="Dhrumil Shah"/><br /><sub><b>Dhrumil Shah</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=dhuma1981" title="Code">💻</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/EdgarFabiano"><img src="https://avatars.githubusercontent.com/u/11666921?s=100" width="100" height="100" alt="Edgar Fabiano De Souza Filho"/><br /><sub><b>Edgar Fabiano De Souza Filho</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=EdgarFabiano" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
