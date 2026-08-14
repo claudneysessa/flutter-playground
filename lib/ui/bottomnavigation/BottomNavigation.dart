@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({Key? key, required this.title}) : super(key: key);
+  const BottomNavigation({super.key, required this.title});
   final String title;
 
   @override

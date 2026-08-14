@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class TabBarExample extends StatefulWidget {
   final String title;
 
-  const TabBarExample({Key? key, required this.title}) : super(key: key);
+  const TabBarExample({super.key, required this.title});
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();

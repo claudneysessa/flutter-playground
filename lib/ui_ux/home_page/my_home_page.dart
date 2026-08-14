@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/store/theme_store.dart';
+import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
 import 'package:flutter_playground/ui_ux/open_source_licenses.dart';
 import 'package:flutter_playground/ui_ux/search_widget.dart';
 import 'package:flutter_playground/values/assets.dart';
@@ -7,14 +8,12 @@ import 'package:flutter_playground/values/imports.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_playground/ui_ux/home_page/my_home_page_store.dart';
-
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -74,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.all(16),
                 child: Text(
                   widget.title,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
             ),
@@ -164,11 +163,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> _launchURL() async {
-    const url = 'https://flutter-playground.flycricket.io/privacy.html';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
+    final Uri url =
+        Uri.parse('https://flutter-playground.flycricket.io/privacy.html');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
     }
   }
 

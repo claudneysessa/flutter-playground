@@ -15,10 +15,10 @@ class RotatedBoxExample extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             RotatedBox(
               quarterTurns: 1,
               child: Text("Hello World!"),

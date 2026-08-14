@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class AboutListTileExample extends StatefulWidget {
   final String title;
 
-  const AboutListTileExample({Key? key, required this.title}) : super(key: key);
+  const AboutListTileExample({super.key, required this.title});
 
   @override
   _AboutListTileState createState() => _AboutListTileState();
@@ -20,8 +20,8 @@ class _AboutListTileState extends State<AboutListTileExample> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: const <Widget>[
+      body: const Column(
+        children: <Widget>[
           AboutListTile(
             icon: FlutterLogo(),
             aboutBoxChildren: <Widget>[

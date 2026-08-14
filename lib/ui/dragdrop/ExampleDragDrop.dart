@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class DragAndDropExample extends StatefulWidget {
   final String title;
 
-  const DragAndDropExample({Key? key, required this.title}) : super(key: key);
+  const DragAndDropExample({super.key, required this.title});
 
   @override
   DragAndDropAppState createState() => DragAndDropAppState();
@@ -41,7 +41,7 @@ class DragAndDropAppState extends State<DragAndDropExample> {
 }
 
 class Dot extends StatefulWidget {
-  const Dot({Key? key, this.color, this.size, this.child}) : super(key: key);
+  const Dot({super.key, this.color, this.size, this.child});
 
   final Color? color;
   final double? size;
@@ -112,7 +112,8 @@ class MovableRect extends StatelessWidget {
         child: rect,
       );
     } else {
-      return DragTarget<bool>(onAccept: (bool data) {
+      return DragTarget<bool>(onAcceptWithDetails:
+          (DragTargetDetails<bool> details) {
         callback(position);
       }, builder:
           (BuildContext context, List<bool?> accepted, List<dynamic> rejected) {

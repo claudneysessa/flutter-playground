@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class StepperExample extends StatefulWidget {
-  const StepperExample({Key? key, required this.title}) : super(key: key);
+  const StepperExample({super.key, required this.title});
   final String title;
 
   @override
@@ -25,12 +25,12 @@ class _StepperExampleState extends State<StepperExample> {
       content: Text("This is the second step"),
       isActive: true,
     ),
-    Step(
-      title: const Text("Step Three"),
+    const Step(
+      title: Text("Step Three"),
       content: Wrap(
         spacing: 8.0, // gap between adjacent chips
         runSpacing: 4.0, // main axis (rows or columns)
-        children: const <Widget>[
+        children: <Widget>[
           Chip(label: Text('Chips11')),
           Chip(label: Text('Chips12')),
           Chip(label: Text('Chips13')),

@@ -27,7 +27,7 @@ class TransformExample extends StatelessWidget {
           ),
           Transform.scale(
             scale: 2,
-            origin: const Offset(0, 0),
+            origin: Offset.zero,
             child: Container(
               color: Colors.indigo,
               height: 150,

@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProgressButton extends StatefulWidget {
-  const ProgressButton({Key? key, required this.title}) : super(key: key);
+  const ProgressButton({super.key, required this.title});
 
   final String title;
 
@@ -19,14 +19,16 @@ class _ProgressButtonState extends State<ProgressButton>
     with TickerProviderStateMixin {
   int _state = 0;
   late Animation<double> _animation;
-  late AnimationController _controller;
+  AnimationController? _controller;
+  Timer? _timer;
   final GlobalKey _globalKey = GlobalKey();
   double _width = double.infinity;
 
   @override
   void dispose() {
+    _timer?.cancel();
+    _controller?.dispose();
     super.dispose();
-    _controller.dispose();
   }
 
   @override
@@ -47,9 +49,9 @@ class _ProgressButtonState extends State<ProgressButton>
             width: _width,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(0.0),
+                padding: EdgeInsets.zero,
                 elevation: 4.0,
-                primary: Colors.lightGreen,
+                backgroundColor: Colors.lightGreen,
               ),
               onPressed: () {
                 setState(() {
@@ -90,21 +92,24 @@ class _ProgressButtonState extends State<ProgressButton>
   void animateButton() {
     final double initialWidth = _globalKey.currentContext!.size!.width;
 
-    _controller = AnimationController(
+    final AnimationController controller = AnimationController(
         duration: const Duration(milliseconds: 300), vsync: this);
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller)
+    _controller = controller;
+    _animation = Tween(begin: 0.0, end: 1.0).animate(controller)
       ..addListener(() {
+        if (!mounted) return;
         setState(() {
           _width = initialWidth - ((initialWidth - 48.0) * _animation.value);
         });
       });
-    _controller.forward();
+    controller.forward();
 
     setState(() {
       _state = 1;
     });
 
-    Timer(const Duration(milliseconds: 3300), () {
+    _timer = Timer(const Duration(milliseconds: 3300), () {
+      if (!mounted) return;
       setState(() {
         _state = 2;
       });

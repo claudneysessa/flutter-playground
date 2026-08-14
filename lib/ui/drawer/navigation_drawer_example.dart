@@ -5,12 +5,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/utils/Strings.dart';
 
-class NavigationDrawer extends StatefulWidget {
+class NavigationDrawerExample extends StatefulWidget {
+  const NavigationDrawerExample({super.key});
+
   @override
   _NavigationDrawerState createState() => _NavigationDrawerState();
 }
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
+class _NavigationDrawerState extends State<NavigationDrawerExample> {
   bool _isVisible = true;
 
   String _title = "Navigation Example";
@@ -90,12 +92,12 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            decoration: const BoxDecoration(color: Colors.orangeAccent),
+          const DrawerHeader(
+            decoration: BoxDecoration(color: Colors.orangeAccent),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const <Widget>[
+              children: <Widget>[
                 FlutterLogo(
                   size: 48.0,
                 ),

@@ -1,11 +1,11 @@
 {
-    "name": "flutter_playground",
-    "short_name": "flutter_playground",
+    "name": "Flutter Playground",
+    "short_name": "Flutter Playground",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Playground app for Flutter. Contains examples to quickly learn and tinker around with various features.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

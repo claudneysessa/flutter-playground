@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class TextSpanExample extends StatefulWidget {
   final String title;
 
-  const TextSpanExample({Key? key, required this.title}) : super(key: key);
+  const TextSpanExample({super.key, required this.title});
 
   @override
   _TextSpanState createState() => _TextSpanState();

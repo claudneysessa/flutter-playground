@@ -30,7 +30,7 @@ class BackdropFilterExample extends StatelessWidget {
                   width: 200.0,
                   height: 200.0,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.white.withValues(alpha: 0.5),
                   ),
                 ),
               ),

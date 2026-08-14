@@ -3,7 +3,9 @@
 // found in the LICENSE file.
 
 class ExampleNames {
-  ExampleNames(this.title,);
+  ExampleNames(
+    this.title,
+  );
 
   final String title;
 }

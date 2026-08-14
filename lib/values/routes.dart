@@ -1,18 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_playground/ui/grid_view/grid_view_example.dart';
-import 'package:flutter_playground/utils/Strings.dart';
-
 import 'package:flutter_playground/values/imports.dart';
 
+// ignore: avoid_classes_with_only_static_members
 class DefaultRoutes {
   ///returns the named routes
   static Map<String, WidgetBuilder> routes() {
     return <String, WidgetBuilder>{
-      Strings.appBarExampleRoute: (BuildContext context) => AppBarExample(),
+      Strings.appBarExampleRoute: (BuildContext context) =>
+          const AppBarExample(),
       Strings.tabBarExampleRoute: (BuildContext context) =>
           const TabBarExample(title: Strings.tabBarTitle),
       Strings.navigationDrawerExampleRoute: (BuildContext context) =>
-          NavigationDrawer(),
+          const NavigationDrawerExample(),
       Strings.bottomNavigationExampleRoute: (BuildContext context) =>
           const BottomNavigation(title: Strings.bottomNavigationTitle),
       Strings.collapsibleToolbarExampleRoute: (BuildContext context) =>
@@ -44,8 +42,6 @@ class DefaultRoutes {
           const AboutListTileExample(title: Strings.aboutListTileExampleTitle),
       Strings.lifeCycleStateExampleRoute: (BuildContext context) =>
           const Lifecycle(title: Strings.lifeCycleStateExampleTitle),
-//      Strings.localAuthExampleRoute: (BuildContext context) =>
-//          LocalAuthExample(title: Strings.localAuthTitle),
       Strings.rotatedBoxExampleRoute: (BuildContext context) =>
           const RotatedBoxExample(Strings.rotatedBoxTitle),
       Strings.nestedListExampleRoute: (BuildContext context) =>
@@ -75,12 +71,8 @@ class DefaultRoutes {
           const ToolTipExample(Strings.toolTipExampleTitle),
       Strings.animatedCrossFadeExampleRoute: (BuildContext context) =>
           const AnimatedCrossFadeExample(Strings.animatedCrossFadeExampleTitle),
-      Strings.flareRoute: (BuildContext context) =>
-          const FlareExample(Strings.flareTitle),
       Strings.dataClassExampleRoute: (BuildContext context) =>
           const DataClassExample(Strings.dataClassExampleTitle),
-//      Strings.googleMapsExampleRoute: (BuildContext context) =>
-//          GoogleMapsExample(Strings.googleMapsExampleTitle),
       Strings.expandedExampleRoute: (BuildContext context) =>
           const ExpandedExample(Strings.expandedExampleTitle),
       Strings.wrapExampleRoute: (BuildContext context) =>
@@ -93,8 +85,6 @@ class DefaultRoutes {
           const TransformExample(Strings.transformExampleTitle),
       Strings.gridViewExampleRoute: (BuildContext context) =>
           const GridViewExample(Strings.gridViewExampleTitle),
-//      Strings.admobPluginRoute: (BuildContext context) =>
-//          AdMobExample(Strings.admobPluginExample),
     };
   }
 }

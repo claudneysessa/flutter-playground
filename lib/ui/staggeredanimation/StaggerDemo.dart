@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
 class StaggerAnimation extends StatelessWidget {
-  StaggerAnimation({Key? key, required this.controller})
+  StaggerAnimation({super.key, required this.controller})
       :
 
         // Each animation defined here transforms its value during the subset
@@ -93,8 +93,7 @@ class StaggerAnimation extends StatelessWidget {
               curve: Curves.ease,
             ),
           ),
-        ),
-        super(key: key);
+        );
 
   final Animation<double> controller;
   final Animation<double> opacity;
@@ -139,7 +138,7 @@ class StaggerAnimation extends StatelessWidget {
 }
 
 class StaggerDemo extends StatefulWidget {
-  const StaggerDemo({Key? key, this.title}) : super(key: key);
+  const StaggerDemo({super.key, this.title});
 
   final String? title;
 
@@ -147,14 +146,16 @@ class StaggerDemo extends StatefulWidget {
   _StaggerDemoState createState() => _StaggerDemoState();
 }
 
-class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin {
+class _StaggerDemoState extends State<StaggerDemo>
+    with TickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
 
-    _controller = AnimationController(duration: const Duration(milliseconds: 2000), vsync: this);
+    _controller = AnimationController(
+        duration: const Duration(milliseconds: 2000), vsync: this);
   }
 
   @override
@@ -189,9 +190,9 @@ class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin
             width: 300.0,
             height: 300.0,
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               border: Border.all(
-                color: Colors.black.withOpacity(0.5),
+                color: Colors.black.withValues(alpha: 0.5),
               ),
             ),
             child: StaggerAnimation(controller: _controller.view),

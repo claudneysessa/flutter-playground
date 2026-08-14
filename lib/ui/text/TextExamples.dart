@@ -8,7 +8,7 @@ import 'package:flutter_playground/utils/Strings.dart';
 class TextExamples extends StatefulWidget {
   final String title;
 
-  const TextExamples({Key? key, required this.title}) : super(key: key);
+  const TextExamples({super.key, required this.title});
 
   @override
   _TextExamplesState createState() => _TextExamplesState();
@@ -47,8 +47,8 @@ class _TextExamplesState extends State<TextExamples> {
       child: TextButton(
         style: TextButton.styleFrom(
           shape: const RoundedRectangleBorder(),
-          primary: Colors.red,
-          onSurface: Colors.white,
+          foregroundColor: Colors.red,
+          disabledForegroundColor: Colors.white,
         ),
         onPressed: () {
           Navigator.pushNamed(context, route);
