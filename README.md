@@ -55,14 +55,45 @@ Consider Contributing if you find this project helpful.
 | ------------------ | ------------------ | ------------------ |
 | <img src="./preview/AnimatedSwitcher.gif" height="400" alt="Screenshot"/>  | <img src="./preview/nested_list.gif" height="400" alt="Screenshot"/>  | <img src="./preview/RotationTransition.gif" height="400" alt="Screenshot"/>  |
 
-| Google Maps Example | Flare Example |
-| ------------------ | ------------------ |
-| <img src="./preview/google_maps_example.gif" height="400" alt="Screenshot"/> | <img src="./preview/flare.gif" height="400" alt="Screenshot"/> |
+> The Google Maps and Flare examples were removed during the 2026 migration and are no longer
+> part of the app.
+
+## Status
+
+This fork was revived in August 2026. The original code targeted Flutter 2.x / Dart 2.12
+and no longer compiled. It now builds against **Flutter 3.44.x / Dart 3.12.x**.
+
+What changed at a high level (see [CHANGELOG.md](CHANGELOG.md) for the details):
+
+- Firebase Analytics/Core removed — the repository never contained a `google-services.json`,
+  so the Android build could not complete.
+- Flare example removed — `flare_flutter` is discontinued and does not support Dart 3.
+  The Google Maps, AdMob and Local Auth files were fully commented out and were removed too.
+- WebView migrated to `webview_flutter` 4 (`WebViewController` + `WebViewWidget`), with a
+  fallback to the external browser on platforms without a WebView implementation.
+- Android toolchain regenerated: Gradle 9.1, AGP 9.0.1, Kotlin 2.3, Kotlin DSL, Java 17.
+- Material 3 theme, `TextTheme` and button APIs updated, keyboard example migrated from
+  `RawKeyboardListener` to `KeyboardListener`.
+
+Supported platforms: **Android, iOS and Web**. iOS was updated to a minimum deployment target
+of 13.0 but could not be built on the machine used for the migration (Windows) — verify it on
+macOS before shipping.
 
 ## Getting Started
 
+Requirements: Flutter 3.27 or newer (validated on 3.44.6), Dart 3.5+, JDK 17+ and the
+Android SDK for Android builds.
+
+```bash
+flutter pub get
+dart run build_runner build      # regenerates the MobX *.g.dart files
+flutter analyze
+flutter test
+flutter run                      # or: flutter run -d chrome
+```
+
 For help getting started with Flutter, view online
-[documentation](https://flutter.io/).
+[documentation](https://flutter.dev/).
 
 ## Contribute
 1. Fork the the project
