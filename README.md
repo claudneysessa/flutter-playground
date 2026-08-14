@@ -158,12 +158,12 @@ For help getting started with Flutter, view online
 <a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60" height="60" alt="Medium"></a>
 <a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60" height="60" alt="LinkedIn"></a>
 
-## Donate
+## Support the original author
 
-> If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
->
-> - [PayPal](https://www.paypal.me/ibhavikmakwana)
-> - Google Pay **(bhavikmakwana43@okhdfcbank)**
+> If this project helped you, the credit for it belongs to
+> [Bhavik Makwana](https://github.com/ibhavikmakwana). Star
+> [the original repository](https://github.com/ibhavikmakwana/FlutterPlayground) — that is
+> where the app and every example in it came from.
 
 ## Maintainers
 
