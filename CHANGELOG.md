@@ -56,6 +56,9 @@ mínima suportada.
 - Web: `index.html` migrado para o bootstrap atual (`flutter_bootstrap.js`); título e descrição
   do app corrigidos no `index.html` e no `manifest.json`.
 - `.metadata` atualizado para o canal `stable` com `project_type` e seção `migration`.
+- `kotlin.incremental=false` no Android: com a compilação incremental ligada, o Kotlin 2.3 falha
+  ao fechar os caches (`Could not close incremental caches ... caches-jvm`) ao compilar os
+  módulos dos plugins neste projeto no Windows.
 - `.gitignore` alinhado ao template atual do Flutter.
 
 ### Removido
