@@ -17,7 +17,9 @@ mínima suportada.
 
 ### Adicionado
 
-- Suíte de testes (`test/`) com 14 testes de unidade e de widget cobrindo `ThemeStore`,
+- Créditos no diálogo "About" do app: nome e versão do app, autor original e responsável pela
+  retomada de 2026, com contato.
+- Suíte de testes (`test/`) com 18 testes de unidade e de widget cobrindo `ThemeStore`,
   `MyHomePageStore`, `DefaultRoutes`, `ExampleNameItem` e a home (`MyApp`).
 - Teste que garante que todo exemplo listado na home possui rota registrada.
 - Manifests Android de `debug` e `profile`, `values-night/styles.xml` e
@@ -83,6 +85,16 @@ mínima suportada.
   `setState() called after dispose()`. O timer agora é cancelado no `dispose`, os callbacks
   checam `mounted` e o `AnimationController` é descartado antes do `super.dispose()` — sem o
   `late`, que quebrava ao sair da tela sem nunca ter apertado o botão.
+
+- README: badges do Codacy, do Codemagic e do Say Thanks removidos (apontavam para serviços do
+  repositório original; o link do Say Thanks retornava 404) e substituídos por badges deste
+  fork — Flutter, Dart, plataformas, testes, licença e último commit. O botão da Google Play,
+  que leva ao app publicado pelo autor original, também saiu.
+- README: seção de licença corrigida. O texto exibido era o da MIT, mas o arquivo `LICENSE`
+  do repositório sempre foi **BSD 2-Clause** (`Copyright (c) 2021, Bhavik Makwana`). O arquivo
+  `LICENSE` prevalece e o README passou a refleti-lo.
+- README: perfil do contribuidor sanni prasad apontava para `prasadsunny1.dev`, cujo DNS não
+  resolve mais; passou a apontar para o perfil no GitHub.
 
 ### Notas
 

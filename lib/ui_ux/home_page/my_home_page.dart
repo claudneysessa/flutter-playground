@@ -152,13 +152,25 @@ class _MyHomePageState extends State<MyHomePage> {
   void openAboutDialog(BuildContext context) {
     showAboutDialog(
       context: context,
-      applicationLegalese:
-          'Playground app for Flutter. Contains examples to quickly learn and tinker around with various features. Consider Contributing if you find this project helpful.',
+      applicationName: Strings.appName,
+      applicationVersion: Strings.appVersion,
+      applicationLegalese: Strings.appLegalese,
       applicationIcon: Image.asset(
         Assets.appIcon,
         height: 24,
         width: 24,
       ),
+      children: <Widget>[
+        const SizedBox(height: 16),
+        Text(
+          Strings.creditsTitle,
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        const SizedBox(height: 8),
+        const Text(Strings.creditsOriginalAuthor),
+        const SizedBox(height: 8),
+        const Text(Strings.creditsRevival),
+      ],
     );
   }
 

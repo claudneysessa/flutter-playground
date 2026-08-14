@@ -1,11 +1,14 @@
 # Flutter Playground
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae27cc3a3b32499cbf4c6d1614719c6f)](https://app.codacy.com/app/ibhavikmakwana/FlutterPlayground?utm_source=github.com&utm_medium=referral&utm_content=ibhavikmakwana/FlutterPlayground&utm_campaign=Badge_Grade_Dashboard)
-[![Codemagic build status](https://api.codemagic.io/apps/5d0de80099fdb700102145c9/5d0de80099fdb700102145c8/status_badge.svg)](https://codemagic.io/apps/5d0de80099fdb700102145c9/5d0de80099fdb700102145c8/latest_build)
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/ibhavikmakwana) 
+[![Flutter](https://img.shields.io/badge/Flutter-3.44.6-02569B?style=flat-square&logo=flutter&logoColor=white)](https://docs.flutter.dev/release/release-notes)
+[![Dart](https://img.shields.io/badge/Dart-3.12.2-0175C2?style=flat-square&logo=dart&logoColor=white)](https://dart.dev/guides/language/evolution)
+[![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-lightgrey?style=flat-square)](#build-status)
+[![Tests](https://img.shields.io/badge/tests-18%20passing-brightgreen?style=flat-square)](test)
+[![License](https://img.shields.io/github/license/claudneysessa/flutter-playground?style=flat-square)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/claudneysessa/flutter-playground?style=flat-square)](https://github.com/claudneysessa/flutter-playground/commits/master)
 
 Playground app for Flutter.
 Contains examples to quickly learn and tinker around with various features.
@@ -14,14 +17,12 @@ Consider Contributing if you find this project helpful.
 > **This is a maintained fork.** The original project by
 > [Bhavik Makwana](https://github.com/ibhavikmakwana/FlutterPlayground) stopped receiving
 > updates in 2021 and no longer compiled with current toolchains. This fork brings it back to
-> life on Flutter 3.44 / Dart 3, keeping the original MIT license and authorship intact.
+> life on Flutter 3.44 / Dart 3, keeping the original license and authorship intact.
 >
 > **2026 revival maintained by Claudney Sarti Sessa** — Senior Developer
 > · [claudneysartisessa@gmail.com](mailto:claudneysartisessa@gmail.com)
 > · [LinkedIn](https://www.linkedin.com/in/claudneysessa)
 > · [GitHub](https://github.com/claudneysessa)
-
-[<img src="./icons/Google-Play-Store-Logo.png" height="100" alt="Screenshot"/>](https://play.google.com/store/apps/details?id=com.ibhavikmakwana.flutterplayground)
 
 ## Preview
 
@@ -92,7 +93,7 @@ Verified on this revival:
 | Check | Result |
 | --- | --- |
 | `flutter analyze` | No issues found |
-| `flutter test` | 17/17 passing |
+| `flutter test` | 18/18 passing |
 | `flutter build web --release` | Success |
 | `flutter build apk --debug` | Success |
 | Runtime | Running on a physical Android 16 device |
@@ -112,7 +113,7 @@ resolution, and 33 compilation errors waited behind it. High level summary — s
 - Android toolchain regenerated: Gradle 9.1, AGP 9.0.1, Kotlin 2.3, Kotlin DSL, Java 17.
 - Material 3 theme, `TextTheme` and button APIs updated, keyboard example migrated from
   `RawKeyboardListener` to `KeyboardListener`.
-- Test suite added (17 unit and widget tests), plus two long-standing bugs fixed along the
+- Test suite added (18 unit and widget tests), plus two long-standing bugs fixed along the
   way: an example listed on the home screen with no route behind it, and a
   `setState() called after dispose()` crash in the Progress Button example.
 
@@ -145,11 +146,17 @@ For help getting started with Flutter, view online
 
 ## Questions?🤔
 
-Hit me on
+**About this fork** — Claudney Sarti Sessa
 
-<a href="https://twitter.com/ibhavikmakwana"><img src="./icons/twitter-icon.png?raw=true" width="60"></a>
-<a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60"></a>
-<a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60"></a>
+<a href="https://www.linkedin.com/in/claudneysessa"><img src="./icons/linkedin-icon.png?raw=true" width="60" alt="LinkedIn"></a>
+&nbsp;[claudneysartisessa@gmail.com](mailto:claudneysartisessa@gmail.com)
+&nbsp;·&nbsp;[github.com/claudneysessa](https://github.com/claudneysessa)
+
+**About the original project** — Bhavik Makwana
+
+<a href="https://twitter.com/ibhavikmakwana"><img src="./icons/twitter-icon.png?raw=true" width="60" alt="Twitter"></a>
+<a href="https://medium.com/@ibhavikmakwana"><img src="./icons/medium-icon.png?raw=true" width="60" alt="Medium"></a>
+<a href="https://www.linkedin.com/in/ibhavikmakwana/"><img src="./icons/linkedin-icon.png?raw=true" width="60" alt="LinkedIn"></a>
 
 ## Donate
 
@@ -172,17 +179,13 @@ listed below.
 
 ## License
 
-Released under the MIT license by Bhavik Makwana. This fork keeps the same license and the
-original copyright notice unchanged; changes made during the 2026 revival are contributed
-under those same terms.
+**BSD 2-Clause**, `Copyright (c) 2021, Bhavik Makwana` — see [LICENSE](LICENSE) for the full
+text. This fork keeps the license and the original copyright notice unchanged; changes made
+during the 2026 revival are contributed under those same terms.
 
-    Copyright (c) 2020 Bhavik Makwana
-    
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+> Note: until this revival, this section of the README reproduced an MIT notice while the
+> `LICENSE` file in the repository has always been BSD 2-Clause. The `LICENSE` file is the
+> authoritative one, so the README was corrected to match it rather than the other way around.
 
 ## Contributors ✨
 
@@ -192,11 +195,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="http://prasadsunny1.dev"><img src="https://avatars.githubusercontent.com/u/11705392?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sanni prasad</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/dhuma1981"><img src="https://avatars.githubusercontent.com/u/298484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhrumil Shah</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=dhuma1981" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/EdgarFabiano"><img src="https://avatars.githubusercontent.com/u/11666921?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edgar Fabiano De Souza Filho</b></sub></a><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=EdgarFabiano" title="Code">💻</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/ibhavikmakwana"><img src="https://avatars.githubusercontent.com/u/22465800?v=4&s=100" width="100px;" alt="Bhavik Makwana"/><br /><sub><b>Bhavik Makwana</b></sub></a><br /><sub>Original author</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=ibhavikmakwana" title="Code">💻</a> <a href="#design" title="Design">🎨</a> <a href="#ideas" title="Ideas">🤔</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/claudneysessa"><img src="https://avatars.githubusercontent.com/u/12506432?v=4&s=100" width="100px;" alt="Claudney Sarti Sessa"/><br /><sub><b>Claudney Sarti Sessa</b></sub></a><br /><sub>2026 revival</sub><br /><a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Code">💻</a> <a href="https://github.com/claudneysessa/flutter-playground/commits?author=claudneysessa" title="Documentation">📖</a> <a href="#maintenance" title="Maintenance">🚧</a> <a href="test" title="Tests">⚠️</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/prasadsunny1"><img src="https://avatars.githubusercontent.com/u/11705392?v=4&s=100" width="100px;" alt="sanni prasad"/><br /><sub><b>sanni prasad</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=prasadsunny1" title="Code">💻</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/dhuma1981"><img src="https://avatars.githubusercontent.com/u/298484?v=4&s=100" width="100px;" alt="Dhrumil Shah"/><br /><sub><b>Dhrumil Shah</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=dhuma1981" title="Code">💻</a></td>
+      <td align="center" valign="top" width="25%"><a href="https://github.com/EdgarFabiano"><img src="https://avatars.githubusercontent.com/u/11666921?v=4&s=100" width="100px;" alt="Edgar Fabiano De Souza Filho"/><br /><sub><b>Edgar Fabiano De Souza Filho</b></sub></a><br /><sub>&nbsp;</sub><br /><a href="https://github.com/ibhavikmakwana/FlutterPlayground/commits?author=EdgarFabiano" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->

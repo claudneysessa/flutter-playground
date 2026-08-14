@@ -6,10 +6,33 @@
   "commit": false,
   "contributors": [
     {
+      "login": "ibhavikmakwana",
+      "name": "Bhavik Makwana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22465800?v=4",
+      "profile": "https://github.com/ibhavikmakwana",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
+    },
+    {
+      "login": "claudneysessa",
+      "name": "Claudney Sarti Sessa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12506432?v=4",
+      "profile": "https://github.com/claudneysessa",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance",
+        "test"
+      ]
+    },
+    {
       "login": "prasadsunny1",
       "name": "sanni prasad",
       "avatar_url": "https://avatars.githubusercontent.com/u/11705392?v=4",
-      "profile": "http://prasadsunny1.dev",
+      "profile": "https://github.com/prasadsunny1",
       "contributions": [
         "code"
       ]
@@ -33,9 +56,9 @@
       ]
     }
   ],
-  "contributorsPerLine": 7,
-  "projectName": "FlutterPlayground",
-  "projectOwner": "ibhavikmakwana",
+  "contributorsPerLine": 5,
+  "projectName": "flutter-playground",
+  "projectOwner": "claudneysessa",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true

@@ -6,6 +6,27 @@ class Strings {
   ///App name
   static const String appName = "Flutter Playground";
 
+  ///About dialog
+  static const String appVersion = "2.0.0 (build 11) · Flutter 3.44";
+
+  static const String appLegalese =
+      "Playground app for Flutter. Contains examples to quickly learn and "
+      "tinker around with various features. Consider Contributing if you find "
+      "this project helpful.\n\nBSD 2-Clause License · Copyright (c) 2021, "
+      "Bhavik Makwana";
+
+  static const String creditsTitle = "Credits";
+
+  static const String creditsOriginalAuthor =
+      "Original author: Bhavik Makwana\n"
+      "github.com/ibhavikmakwana/FlutterPlayground";
+
+  static const String creditsRevival = "2026 revival, Flutter 3.44 / Dart 3 "
+      "migration: Claudney Sarti Sessa, Senior Developer\n"
+      "claudneysartisessa@gmail.com\n"
+      "linkedin.com/in/claudneysessa\n"
+      "github.com/claudneysessa/flutter-playground";
+
   ///Assets
   //Fonts
   static const String fontRobotoBold = "MajorMonoDisplay-Regular.ttf";
