@@ -79,6 +79,10 @@ mínima suportada.
 - O callback `onTap` de `ExampleNameItem` era declarado e nunca chamado.
 - `WidgetsBinding.instance!` (asserção nula desnecessária desde o Flutter 3) no exemplo de
   ciclo de vida.
+- `ProgressButton`: sair da tela com a animação ou o timer de 3300 ms pendentes disparava
+  `setState() called after dispose()`. O timer agora é cancelado no `dispose`, os callbacks
+  checam `mounted` e o `AnimationController` é descartado antes do `super.dispose()` — sem o
+  `late`, que quebrava ao sair da tela sem nunca ter apertado o botão.
 
 ### Notas
 
