@@ -14,6 +14,10 @@ Playground app for Flutter.
 Contains examples to quickly learn and tinker around with various features.
 Consider Contributing if you find this project helpful.
 
+**[Open the live demo](https://claudneysessa.github.io/flutter-playground/)** — the Flutter web
+build of this fork, published from the `gh-pages` branch. It is the same code as `master`,
+compiled for the browser; the app was designed for phones, so a narrow window looks best.
+
 > **This is a maintained fork.** The original project by
 > [Bhavik Makwana](https://github.com/ibhavikmakwana/FlutterPlayground) stopped receiving
 > updates in 2021 and no longer compiled with current toolchains. This fork brings it back to
